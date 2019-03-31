@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Button, Image } from "./../../ui-kit/index";
+import { Flex, Button, Image, vars } from "./../../ui-kit/index";
 import InfoForm from "./info-form.component";
 import styled from "styled-components";
 
@@ -18,20 +18,21 @@ const RowOne = styled(Flex)`
 `;
 
 const ImageWrapper = styled(Flex)`
-  box-sizing: border-box;
-  width: 50%;
-  background-color: grey;
+  min-width: 50%;
+  background-color: ${vars.colour.greyLighter};
   padding: 1rem;
   justify-content: center;
 `;
 
 const InfoFormContainer = styled(Flex)`
+  width: 50%;
+  justify-content: flex-end;
   padding: 1rem 2rem;
 `;
 
 const HowItWorks = styled(Flex)`
   justify-content: center;
-  background-color: grey;
+  background-color: ${vars.colour.blueMain};
   height: 90px;
   margin-bottom: 1.5rem;
 `;
@@ -42,12 +43,12 @@ const PaymentContactRow = styled(Flex)`
 `;
 
 const PaymentSection = styled(Flex)`
-  background-color: red;
+  background-color: ${vars.colour.redMain};
   width: 50%;
 `;
 
 const ContactSection = styled(Flex)`
-  background-color: green;
+  background-color: ${vars.colour.yellowMain};
   width: 50%;
 `;
 

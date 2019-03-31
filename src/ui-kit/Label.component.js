@@ -3,9 +3,9 @@ import styled from "styled-components";
 import vars from "./vars";
 
 const StyledLabel = styled.label`
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: ${vars.colour.purpleText};
+  color: ${vars.colour.blueText};
   input {
     display: ${props => (props.inline ? "inline-block" : "block")};
     margin-left: ${props => (props.inline ? "0.5rem" : "0")};

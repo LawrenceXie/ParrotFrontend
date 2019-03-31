@@ -2,18 +2,17 @@ import styled, { css } from "styled-components";
 import vars from "./vars";
 
 const {
-  greyLight,
+  blueMain,
+  blueDark,
+  blueLight,
+  blueText,
+  redError,
+  redLight,
+  redDark,
   greyLighter,
-  lightMediumGrey,
-  purpleLightest,
-  purpleLighter,
-  purple,
-  purpleDark,
-  purpleText,
-  white,
-  darkRed,
-  red,
-  lightRose
+  greyLight,
+  mediumGrey,
+  white
 } = vars.colour;
 
 const baseRules = css`
@@ -22,12 +21,12 @@ const baseRules = css`
   justify-content: center;
   align-items: center;
   border-radius: ${vars.button.borderRadius};
-  border: 1px solid ${purple};
-  padding-left: 3.9rem;
-  padding-right: 3.9rem;
-  height: 5.8rem;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
+  border: 1px solid ${blueMain};
+  padding-left: 1.9rem;
+  padding-right: 1.9rem;
+  height: 2.8rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   cursor: pointer;
   outline: none;
   appearance: none;
@@ -49,46 +48,46 @@ const baseRules = css`
 `;
 
 const primaryRules = css`
-  background-color: ${p => (p.outline ? white : purple)};
-  color: ${p => (p.outline ? purple : white)};
-  border-color: ${purple};
+  background-color: ${p => (p.outline ? white : blueMain)};
+  color: ${p => (p.outline ? blueMain : white)};
+  border-color: ${blueMain};
   &:hover:not([disabled]) {
-    border-color: ${purpleDark};
-    background-color: ${p => (p.outline ? white : purpleDark)};
+    border-color: ${blueDark};
+    background-color: ${p => (p.outline ? white : blueDark)};
   }
 `;
 
 const secondaryRules = css`
-  background-color: ${purpleLightest};
-  border-color: ${purple};
-  color: ${purple};
+  background-color: ${blueLight};
+  border-color: ${blueMain};
+  color: ${blueMain};
   &:hover:not([disabled]) {
-    background-color: ${purpleLighter};
+    background-color: ${blueLight};
   }
 `;
 
 const cancelRules = css`
-  background-color: ${lightMediumGrey};
-  border-color: ${lightMediumGrey};
-  color: ${purpleText};
+  background-color: ${mediumGrey};
+  border-color: ${mediumGrey};
+  color: ${blueText};
   &:hover:not([disabled]) {
     background-color: ${greyLight};
     border-color: ${greyLight};
-    color: ${purpleText};
+    color: ${blueText};
   }
 `;
 
 const warningRules = css`
-  background-color: ${darkRed};
+  background-color: ${redDark};
   color: ${white};
-  border-color: ${darkRed};
+  border-color: ${redDark};
   &:hover:not([disabled]) {
-    border-color: ${red};
-    background-color: ${red};
+    border-color: ${redError};
+    background-color: ${redError};
   }
   &[disabled] {
-    background-color: ${lightRose};
-    border-color: ${lightRose};
+    background-color: ${redLight};
+    border-color: ${redLight};
     color: ${white};
     cursor: initial;
   }
