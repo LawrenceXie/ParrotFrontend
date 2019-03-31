@@ -1,4 +1,4 @@
-import LandingPageContainer from './landing-page-container';
+import LandingPageContainer from './landing-page/landing-page-container';
 
 export {
     LandingPageContainer

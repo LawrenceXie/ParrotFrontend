@@ -5,8 +5,10 @@ const StyledDiv = styled.div`
   display: flex;
 `;
 
-const Flex = ({children}) => {
-  return <StyledDiv>{children}</StyledDiv>;
-};
+const Flex = ({className, children}) => (
+  <StyledDiv className={className}>
+    {children}
+  </StyledDiv>
+);
 
 export default Flex;
