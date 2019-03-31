@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import Checkout from './components/Checkout';
-import Input from './components/Input';
+import LandingPageContainer from './components/landing-page-container';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-         <Input/>
-         
-         <Checkout/>
-       
-      </div>
+      <LandingPageContainer/>
     );
   }
 }
