@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from './index';
+import { Flex } from './../ui-kit/index';
 import styled from 'styled-components';
 
 const LandingPageContainer = () => {

@@ -1,1 +1,5 @@
-export * from './../ui-kit/index';
+import LandingPageContainer from './landing-page-container';
+
+export {
+    LandingPageContainer
+}
