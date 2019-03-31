@@ -1,0 +1,78 @@
+{
+  // Shared workspace extensions.
+  // Requires this extension: https://marketplace.visualstudio.com/items?itemName=rebornix.project-snippets
+  //
+  // Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  "Log to console": {
+    "prefix": "clog",
+    "body": ["console.log('💜', '$1', $1);", "$2"]
+  },
+  "Log object to console": {
+    "prefix": "clogobj",
+    "body": ["console.log('💜', { $1 });", "$2"]
+  },
+  "Warn to console": {
+    "prefix": "cwarn",
+    "body": ["console.warn('💜', '$1', $1);", "$2"]
+  },
+  "Warn object to console": {
+    "prefix": "cwarnobj",
+    "body": ["console.warn('💜', { $1 });", "$2"]
+  },
+  "Arrow function": {
+    "prefix": "arrow func () => {}",
+    "body": ["($1) => {$2}"]
+  },
+  "New presentational component": {
+    "prefix": "component file template",
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types';",
+      "import { Text, Flex, Box } from 'ui-kit';",
+      "",
+      "export const ${5:MyPresenter} = ({ ${6:contentProp} }) => (",
+      "  ${7:<Flex>",
+      "    <Box>",
+      "      <Text>{${6:contentProp}\\}</Text>",
+      "    </Box>",
+      "  </Flex>}",
+      ");",
+      "",
+      "${5:MyPresenter}.propTypes = {",
+      "  ${6:contentProp}: PropTypes.string,",
+      "};",
+      "${5:MyPresenter}.defaultProps = {",
+      "  ${6:contentProp}: 'Some text content',",
+      "};"
+    ]
+  },
+  "New Storybook file template": {
+    "prefix": "storybook file template",
+    "body": [
+      "import React from 'react';",
+      "import { storiesOf } from '@storybook/react';",
+      "import { ${2:MyComponent} } from './${TM_FILENAME_BASE/(\\.stories)//}';",
+      "",
+      "storiesOf('${3|UI/,App/,App/Enrollment/,App/MemberExperience/,App/EmployerExperience/|}${2:MyComponent}', module)",
+      "  .add('${4:default}', () => (",
+      "    <${2:MyComponent} />",
+      "  ));"
+    ]
+  },
+  "add a Storybook section": {
+    "prefix": "storiesOf storybook section",
+    "body": [
+      "storiesOf('${3|UI/,App/,App/Enrollment/,App/MemberExperience/|}${2:MyComponent}', module)",
+      "  .add('${4:default}', () => (",
+      "    <${2:MyComponent} />",
+      "  ));"
+    ]
+  },
+  "add a Storybook story": {
+    "prefix": "add story to storybook",
+    "body": [".add('${1:default}', () => (", "  <${2:MyComponent} />", "));"]
+  }
+}

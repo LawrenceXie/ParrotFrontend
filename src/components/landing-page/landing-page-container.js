@@ -1,6 +1,7 @@
-import React from 'react';
-import { Flex, Button, Image } from './../../ui-kit/index';
-import styled from 'styled-components';
+import React from "react";
+import { Flex, Button, Image } from "./../../ui-kit/index";
+import InfoForm from "./info-form.component";
+import styled from "styled-components";
 
 const Page = styled.div`
   font-family: Arial, sans-serif;
@@ -8,26 +9,31 @@ const Page = styled.div`
 
 const TopNav = styled(Flex)`
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 `;
 
 const RowOne = styled(Flex)`
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 `;
 
 const ImageWrapper = styled(Flex)`
   box-sizing: border-box;
   width: 50%;
   background-color: grey;
-  padding: 10px;
+  padding: 1rem;
+  justify-content: center;
+`;
+
+const InfoFormContainer = styled(Flex)`
+  padding: 1rem 2rem;
 `;
 
 const HowItWorks = styled(Flex)`
   justify-content: center;
   background-color: grey;
   height: 90px;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 `;
 
 const PaymentContactRow = styled(Flex)`
@@ -46,7 +52,6 @@ const ContactSection = styled(Flex)`
 `;
 
 const LandingPageContainer = () => {
-
   return (
     <Page>
       <TopNav>
@@ -55,21 +60,22 @@ const LandingPageContainer = () => {
       </TopNav>
       <RowOne>
         <ImageWrapper>
-          <Image width={'100%'} height={'18rem'}
-          url={'https://www.woodlandtrust.org.uk/media/100142125/chiffchaff.jpg?cb=302614132&preset=gallery-tab-main-image'}/>
+          <Image
+            width={"100%"}
+            height={"18rem"}
+            url={
+              "https://www.woodlandtrust.org.uk/media/100142125/chiffchaff.jpg?cb=302614132&preset=gallery-tab-main-image"
+            }
+          />
         </ImageWrapper>
-        <Flex>form goes here</Flex>
+        <InfoFormContainer>
+          <InfoForm />
+        </InfoFormContainer>
       </RowOne>
-      <HowItWorks>
-        How it works card here
-      </HowItWorks>
+      <HowItWorks>How it works card here</HowItWorks>
       <PaymentContactRow>
-        <PaymentSection>
-          Payment stuff here
-        </PaymentSection>
-        <ContactSection>
-          contact section here
-        </ContactSection>
+        <PaymentSection>Payment stuff here</PaymentSection>
+        <ContactSection>contact section here</ContactSection>
       </PaymentContactRow>
     </Page>
   );

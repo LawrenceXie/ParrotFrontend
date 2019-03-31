@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import vars from './vars';
+import styled, { css } from "styled-components";
+import vars from "./vars";
 
 const {
   greyLight,
@@ -13,7 +13,7 @@ const {
   white,
   darkRed,
   red,
-  lightRose,
+  lightRose
 } = vars.colour;
 
 const baseRules = css`
