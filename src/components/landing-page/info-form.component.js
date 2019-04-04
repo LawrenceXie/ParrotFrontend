@@ -9,7 +9,7 @@ const Card = styled(Flex)`
   padding: 1rem 2rem;
   min-width: 70%;
   max-width: 100%;
-  box-shadow: 4px 10px ${vars.colour.greyDark};
+  box-shadow: 5px 10px 1px ${vars.colour.darkBlack};
 `;
 
 const Header = styled.h1`

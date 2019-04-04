@@ -25,10 +25,11 @@ const vars = {
     paleGrey: "#f2f2f5",
     mediumGrey: "#afb5ba",
     darkGrey: "#727272",
-    offBlack: "#4A4A4A",
+    offBlack: "#282828",
     darkBlack: "#0a0b0c",
     black: "#000000",
-    redError: "#D92045"
+    redError: "#D92045",
+    kijPurple: "#373373;"
   },
   button: {
     borderRadius: "0.3rem",

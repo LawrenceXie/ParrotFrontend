@@ -1,15 +1,18 @@
 import React from "react";
-import { Flex, Button, Image, vars } from "./../../ui-kit/index";
+import { Flex, Button, vars } from "./../../ui-kit/index";
 import InfoForm from "./info-form.component";
 import styled from "styled-components";
+import splashImage from "./parrot.png";
 
 const Page = styled.div`
-  font-family: Arial, sans-serif;
+  font-family: segan;
+  background-color: ${vars.colour.kijPurple};
 `;
 
 const TopNav = styled(Flex)`
   justify-content: space-between;
   margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
 `;
 
 const RowOne = styled(Flex)`
@@ -22,34 +25,48 @@ const ImageWrapper = styled(Flex)`
   background-color: ${vars.colour.greyLighter};
   padding: 1rem;
   justify-content: center;
+  background: url(${splashImage}) no-repeat center center scroll;
 `;
 
 const InfoFormContainer = styled(Flex)`
   width: 50%;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 1rem 2rem;
 `;
 
 const HowItWorks = styled(Flex)`
   justify-content: center;
-  background-color: ${vars.colour.blueMain};
-  height: 90px;
-  margin-bottom: 1.5rem;
+  background-color: ${vars.colour.yellowLight};
+  height: 450px;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  color: ${vars.colour.blueText};
+  font-weight: 600;
 `;
 
 const PaymentContactRow = styled(Flex)`
   justify-content: space-between;
-  height: 90px;
+  height: 150px;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
 `;
 
 const PaymentSection = styled(Flex)`
-  background-color: ${vars.colour.redMain};
-  width: 50%;
+  background-color: ${vars.colour.redLight};
+  min-width: 48%;
+  border-radius: 4px;
+  padding: 2rem;
+  color: ${vars.colour.white};
+  font-weight: 500;
 `;
 
 const ContactSection = styled(Flex)`
-  background-color: ${vars.colour.yellowMain};
-  width: 50%;
+  background-color: ${vars.colour.redLight};
+  width: 48%;
+  border-radius: 4px;
+  padding: 2rem;
+  color: ${vars.colour.white};
+  font-weight: 500;
 `;
 
 const LandingPageContainer = () => {
@@ -60,15 +77,7 @@ const LandingPageContainer = () => {
         <Button primary>other buttons</Button>
       </TopNav>
       <RowOne>
-        <ImageWrapper>
-          <Image
-            width={"100%"}
-            height={"18rem"}
-            url={
-              "https://www.woodlandtrust.org.uk/media/100142125/chiffchaff.jpg?cb=302614132&preset=gallery-tab-main-image"
-            }
-          />
-        </ImageWrapper>
+        <ImageWrapper />
         <InfoFormContainer>
           <InfoForm />
         </InfoFormContainer>
@@ -76,7 +85,7 @@ const LandingPageContainer = () => {
       <HowItWorks>How it works card here</HowItWorks>
       <PaymentContactRow>
         <PaymentSection>Payment stuff here</PaymentSection>
-        <ContactSection>contact section here</ContactSection>
+        <ContactSection>Contact section here</ContactSection>
       </PaymentContactRow>
     </Page>
   );

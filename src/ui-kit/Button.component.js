@@ -18,6 +18,7 @@ const {
 const baseRules = css`
   display: flex;
   flex-direction: row;
+  font-family: segan;
   justify-content: center;
   align-items: center;
   border-radius: ${vars.button.borderRadius};
