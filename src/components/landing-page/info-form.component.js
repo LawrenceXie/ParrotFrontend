@@ -74,21 +74,28 @@ const InfoForm = () => {
         onClick={() => {
           if (itemLink && name && email && address) {
             const deliveryOrder = { itemLink, name, email, address };
-            axios.post(`/order`, deliveryOrder).then(res => {
-              if (res.status === 200) {
-                alert(
-                  "Order sent successfully! You should be receiving an email shortly"
-                );
-                setItemLink("");
-                setName("");
-                setAddress("");
-                setEmail("");
-              } else {
+            axios
+              .post(`/order`, deliveryOrder)
+              .then(res => {
+                if (res.status !== 200) {
+                  alert(
+                    "Sorry, error occurred while sending order. Please contact our customer support at support@packageparrot.com"
+                  );
+                } else {
+                  alert(
+                    "Order sent successfully! You should be receiving an email shortly"
+                  );
+                  setItemLink("");
+                  setName("");
+                  setAddress("");
+                  setEmail("");
+                }
+              })
+              .catch(err => {
                 alert(
                   "Sorry, error occurred while sending order. Please contact our customer support at support@packageparrot.com"
                 );
-              }
-            });
+              });
             console.log(deliveryOrder);
           } else {
             alert("Please fill in all the fields");
