@@ -15,6 +15,10 @@ const TopNav = styled(Flex)`
   padding: 1rem 2rem;
 `;
 
+const ButtonRow = styled(Flex)`
+  flex-wrap: wrap;
+`;
+
 const RowOne = styled(Flex)`
   justify-content: space-between;
   margin-bottom: 1.5rem;
@@ -80,8 +84,24 @@ const LandingPageContainer = () => {
   return (
     <Page>
       <TopNav>
-        <Button primary>logo guy</Button>
-        <Button primary>other buttons</Button>
+        <ButtonRow>
+          <a
+            href="#payment"
+            style={{
+              textDecoration: "none",
+              marginRight: "10px",
+              marginBottom: "10px"
+            }}
+          >
+            <Button primary>Payment Info</Button>
+          </a>
+          <a href="#howWorks" style={{ textDecoration: "none" }}>
+            <Button primary>How it Works</Button>
+          </a>
+        </ButtonRow>
+        <a href="#contact" style={{ textDecoration: "none" }}>
+          <Button primary>Contact</Button>
+        </a>
       </TopNav>
       <RowOne>
         <ImageWrapper />
@@ -89,10 +109,16 @@ const LandingPageContainer = () => {
           <InfoForm />
         </InfoFormContainer>
       </RowOne>
-      <HowItWorks>How it works card here</HowItWorks>
+      <HowItWorks>
+        <span id="howWorks">How it works card here</span>
+      </HowItWorks>
       <PaymentContactRow>
-        <PaymentSection>Payment stuff here</PaymentSection>
-        <ContactSection>Contact section here</ContactSection>
+        <PaymentSection>
+          <span id="payment">Payment stuff here</span>
+        </PaymentSection>
+        <ContactSection>
+          <span id="contact">Contact section here</span>
+        </ContactSection>
       </PaymentContactRow>
     </Page>
   );
