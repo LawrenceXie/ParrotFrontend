@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Flex, Label, vars, Input, Button } from "./../../ui-kit/index";
 import styled from "styled-components";
+import axios from "axios";
 
 const Card = styled(Flex)`
   background-color: ${vars.colour.blueDarker};
@@ -73,6 +74,21 @@ const InfoForm = () => {
         onClick={() => {
           if (itemLink && name && email && address) {
             const deliveryOrder = { itemLink, name, email, address };
+            axios.post(`/order`, deliveryOrder).then(res => {
+              if (res.status === 200) {
+                alert(
+                  "Order sent successfully! You should be receiving an email shortly"
+                );
+                setItemLink("");
+                setName("");
+                setAddress("");
+                setEmail("");
+              } else {
+                alert(
+                  "Sorry, error occurred while sending order. Please contact our customer support at support@packageparrot.com"
+                );
+              }
+            });
             console.log(deliveryOrder);
           } else {
             alert("Please fill in all the fields");
