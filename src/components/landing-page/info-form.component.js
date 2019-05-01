@@ -1,5 +1,5 @@
-import React from "react";
-import { Flex, Label, vars, Input } from "./../../ui-kit/index";
+import React, { useState } from "react";
+import { Flex, Label, vars, Input, Button } from "./../../ui-kit/index";
 import styled from "styled-components";
 
 const Card = styled(Flex)`
@@ -39,25 +39,48 @@ const StyledInput = styled(Input)`
 `;
 
 const InfoForm = () => {
+  const [itemLink, setItemLink] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
   return (
     <Card>
       <Header>Your order info below</Header>
       <LabelBoxPair>
         <StyledLabel>Link to item</StyledLabel>
-        <StyledInput />
+        <StyledInput
+          value={itemLink}
+          onChange={e => setItemLink(e.target.value)}
+        />
       </LabelBoxPair>
       <LabelBoxPair>
         <StyledLabel>Name</StyledLabel>
-        <StyledInput />
+        <StyledInput value={name} onChange={e => setName(e.target.value)} />
       </LabelBoxPair>
       <LabelBoxPair>
         <StyledLabel>Email</StyledLabel>
-        <StyledInput />
+        <StyledInput value={email} onChange={e => setEmail(e.target.value)} />
       </LabelBoxPair>
       <LabelBoxPair>
         <StyledLabel>Delivery Address</StyledLabel>
-        <StyledInput />
+        <StyledInput
+          value={address}
+          onChange={e => setAddress(e.target.value)}
+        />
       </LabelBoxPair>
+      <Button
+        primary
+        onClick={() => {
+          if (itemLink && name && email && address) {
+            const deliveryOrder = { itemLink, name, email, address };
+            console.log(deliveryOrder);
+          } else {
+            alert("Please fill in all the fields");
+          }
+        }}
+      >
+        Submit
+      </Button>
     </Card>
   );
 };
