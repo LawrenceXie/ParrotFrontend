@@ -26,12 +26,19 @@ const ImageWrapper = styled(Flex)`
   padding: 1rem;
   justify-content: center;
   background: url(${splashImage}) no-repeat center center scroll;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 const InfoFormContainer = styled(Flex)`
   width: 50%;
   justify-content: center;
   padding: 1rem 2rem;
+  @media (max-width: 650px) {
+    width: 100%;
+  }
 `;
 
 const HowItWorks = styled(Flex)`
