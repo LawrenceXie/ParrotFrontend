@@ -29,7 +29,7 @@ const vars = {
     darkBlack: "#0a0b0c",
     black: "#000000",
     redError: "#D92045",
-    kijPurple: "#373373;"
+    kijPurple: "#373373"
   },
   button: {
     borderRadius: "0.3rem",

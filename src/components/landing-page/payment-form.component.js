@@ -32,6 +32,18 @@ const StyledInput = styled(Input)`
 
 const StyledStripeCheckout = styled(StripeCheckout)`
   width: 100%;
+  background: ${vars.colour.blueMain} !important;
+  box-shadow: none !important;
+  transition: all 300ms linear;
+  span {
+    background-image: none !important;
+    color: ${vars.colour.white} !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  &:hover {
+    background: ${vars.colour.blueDark} !important;
+  }
 `;
 
 const StyledHeader = styled.h1`
@@ -40,8 +52,12 @@ const StyledHeader = styled.h1`
 `;
 
 const Underline = styled.hr`
-  color: white;
+  color: ${vars.colour.white};
   margin-bottom: 20px;
+`;
+
+const Box = styled.div`
+  width: 100%;
 `;
 
 const PaymentForm = () => {
@@ -78,7 +94,7 @@ const PaymentForm = () => {
   };
 
   return (
-    <div>
+    <Box>
       <StyledHeader>Pay for your order here</StyledHeader>
       <Underline />
       <Container>
@@ -104,7 +120,7 @@ const PaymentForm = () => {
           billingAddress={false}
         />
       </Container>
-    </div>
+    </Box>
   );
 };
 
