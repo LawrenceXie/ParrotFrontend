@@ -96,7 +96,6 @@ const InfoForm = () => {
                   "Sorry, error occurred while sending order. Please contact our customer support at support@packageparrot.com"
                 );
               });
-            console.log(deliveryOrder);
           } else {
             alert("Please fill in all the fields");
           }

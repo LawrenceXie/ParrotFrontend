@@ -6,7 +6,7 @@ import ErrorIcon from "./assets/error-icon.svg";
 const Input = styled.input`
   font-size: 1rem;
   height: 2.4rem;
-  padding: 0 4rem 0 1rem;
+  padding: 0 1rem 0 1rem;
   border: 1px solid ${vars.colour.greyLight};
   border-radius: 2px;
   background-position: right 1rem top 50%;

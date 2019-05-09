@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex, Button, vars } from "./../../ui-kit/index";
 import InfoForm from "./info-form.component";
+import PaymentForm from "./payment-form.component";
 import styled from "styled-components";
 import splashImage from "./parrot.png";
 
@@ -57,18 +58,25 @@ const HowItWorks = styled(Flex)`
 
 const PaymentContactRow = styled(Flex)`
   justify-content: space-between;
-  height: 150px;
   padding: 0.5rem;
   padding-bottom: 1rem;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const PaymentSection = styled(Flex)`
   background-color: ${vars.colour.redLight};
-  min-width: 48%;
+  width: 48%;
   border-radius: 4px;
   padding: 2rem;
   color: ${vars.colour.white};
   font-weight: 500;
+  margin-bottom: 10px;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 `;
 
 const ContactSection = styled(Flex)`
@@ -78,6 +86,9 @@ const ContactSection = styled(Flex)`
   padding: 2rem;
   color: ${vars.colour.white};
   font-weight: 500;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 `;
 
 const LandingPageContainer = () => {
@@ -114,7 +125,8 @@ const LandingPageContainer = () => {
       </HowItWorks>
       <PaymentContactRow>
         <PaymentSection>
-          <span id="payment">Payment stuff here</span>
+          <span id="payment" />
+          <PaymentForm />
         </PaymentSection>
         <ContactSection>
           <span id="contact">Contact section here</span>
