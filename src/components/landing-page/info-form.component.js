@@ -10,11 +10,11 @@ const Card = styled(Flex)`
   padding: 1rem 2rem;
   min-width: 70%;
   max-width: 100%;
-  box-shadow: 5px 10px 1px ${vars.colour.darkBlack};
+  box-shadow: 0 8px 8px 0 ${vars.colour.darkBlack};
 `;
 
 const Header = styled.h1`
-  color: ${vars.colour.blueMain};
+  color: ${vars.colour.white};
 `;
 
 const LabelBoxPair = styled(Flex)`

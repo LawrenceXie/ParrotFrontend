@@ -3,11 +3,11 @@ import { Flex, Button, vars } from "./../../ui-kit/index";
 import InfoForm from "./info-form.component";
 import PaymentForm from "./payment-form.component";
 import styled from "styled-components";
-import splashImage from "./parrot.png";
+import splashImage from "./custom.png";
 
 const Page = styled.div`
   font-family: segan;
-  background-color: ${vars.colour.kijPurple};
+  background-color: ${vars.colour.white};
 `;
 
 const TopNav = styled(Flex)`
@@ -27,10 +27,11 @@ const RowOne = styled(Flex)`
 
 const ImageWrapper = styled(Flex)`
   min-width: 50%;
-  background-color: ${vars.colour.greyLighter};
-  padding: 1rem;
   justify-content: center;
-  background: url(${splashImage}) no-repeat center center scroll;
+  background-image: url(${splashImage});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 
   @media (max-width: 650px) {
     display: none;
@@ -40,7 +41,7 @@ const ImageWrapper = styled(Flex)`
 const InfoFormContainer = styled(Flex)`
   width: 50%;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   @media (max-width: 650px) {
     width: 100%;
   }
@@ -67,7 +68,7 @@ const PaymentContactRow = styled(Flex)`
 `;
 
 const PaymentSection = styled(Flex)`
-  background-color: ${vars.colour.redLight};
+  background-color: ${vars.colour.blueDarker};
   width: 48%;
   border-radius: 4px;
   padding: 2rem;
@@ -80,15 +81,39 @@ const PaymentSection = styled(Flex)`
 `;
 
 const ContactSection = styled(Flex)`
-  background-color: ${vars.colour.redLight};
+  background-color: ${vars.colour.blueDarker};
   width: 48%;
   border-radius: 4px;
   padding: 2rem;
   color: ${vars.colour.white};
   font-weight: 500;
+  margin-bottom: 10px;
   @media (max-width: 750px) {
     width: 100%;
   }
+`;
+
+const Box = styled.div`
+  width: 100%;
+`;
+
+const StyledLink = styled.a`
+  color: ${vars.colour.white};
+  text-decoration: none;
+  transition: 200ms all linear;
+  &:hover {
+    color: ${vars.colour.darkGrey};
+  }
+`;
+
+const StyledHeader = styled.h1`
+  margin: 0;
+  margin-bottom: 10px;
+`;
+
+const Underline = styled.hr`
+  color: ${vars.colour.white};
+  margin-bottom: 20px;
 `;
 
 const LandingPageContainer = () => {
@@ -104,14 +129,14 @@ const LandingPageContainer = () => {
               marginBottom: "10px"
             }}
           >
-            <Button primary>Payment Info</Button>
+            <Button light>Payment Info</Button>
           </a>
           <a href="#howWorks" style={{ textDecoration: "none" }}>
-            <Button primary>How it Works</Button>
+            <Button light>How it Works</Button>
           </a>
         </ButtonRow>
         <a href="#contact" style={{ textDecoration: "none" }}>
-          <Button primary>Contact</Button>
+          <Button light>Contact</Button>
         </a>
       </TopNav>
       <RowOne>
@@ -129,7 +154,17 @@ const LandingPageContainer = () => {
           <PaymentForm />
         </PaymentSection>
         <ContactSection>
-          <span id="contact">Contact section here</span>
+          <span id="contact" />
+          <Box>
+            <StyledHeader>Contact</StyledHeader>
+            <Underline />
+            <StyledLink
+              href="mailto:support@packageparrot.com?Subject=Help!"
+              target="_top"
+            >
+              Email: support@packageparrot.com
+            </StyledLink>
+          </Box>
         </ContactSection>
       </PaymentContactRow>
     </Page>

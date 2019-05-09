@@ -58,6 +58,19 @@ const primaryRules = css`
   }
 `;
 
+const lightRules = css`
+  background-color: ${vars.colour.white};
+  color: ${vars.colour.grey};
+  border-width: 0 1px 0 1px;
+  border-radius: 0;
+  border-color: ${vars.colour.blueMain};
+  &:hover:not([disabled]) {
+    color: ${vars.colour.greyDark};
+    background-color: ${vars.colour.white};
+    box-shadow: 0 7px 0 0 ${vars.colour.blueDark};
+  }
+`;
+
 const secondaryRules = css`
   background-color: ${blueLight};
   border-color: ${blueMain};
@@ -106,6 +119,7 @@ const Button = styled.button`
   ${({ cancel }) => cancel && cancelRules}
   ${({ warning }) => warning && warningRules}
   ${({ small }) => small && smallRules}
+  ${({ light }) => light && lightRules}
   ${({ fit }) =>
     fit &&
     `
