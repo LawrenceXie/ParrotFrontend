@@ -98,10 +98,10 @@ const HowWorks = () => {
         </PPDescription>
         <PPHowWorks>
           <Row>
-            <span class="bigNum">1.</span>
+            <span className="bigNum">1.</span>
             <div>
               <p>Request your package</p>
-              <span class="instructions">
+              <span className="instructions">
                 Fill out the request form with your name, email, delivery
                 address, and URL link for the package. We'll send you an order
                 email while we check to confirm availability.
@@ -109,10 +109,10 @@ const HowWorks = () => {
             </div>
           </Row>
           <Row>
-            <span class="bigNum">2.</span>
+            <span className="bigNum">2.</span>
             <div>
               <p>Pay for the package</p>
-              <span class="instructions">
+              <span className="instructions">
                 After confirming that the item is available, we'll send you an
                 email with the package cost according to our pricing table
                 below. Pay using our secure payment portal.
@@ -120,10 +120,10 @@ const HowWorks = () => {
             </div>
           </Row>
           <Row>
-            <span class="bigNum">3.</span>
+            <span className="bigNum">3.</span>
             <div>
               <p>Collect your package!</p>
-              <span class="instructions">
+              <span className="instructions">
                 Sit tight and we'll deliver your package to your address in
                 under five days.
               </span>
