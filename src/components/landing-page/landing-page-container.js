@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Button, vars } from "./../../ui-kit/index";
 import InfoForm from "./info-form.component";
 import PaymentForm from "./payment-form.component";
+import HowWorks from "./how-works.component";
 import styled from "styled-components";
 import splashImage from "./custom.png";
 
@@ -47,14 +48,21 @@ const InfoFormContainer = styled(Flex)`
   }
 `;
 
-const HowItWorks = styled(Flex)`
+const HowItWorks = styled.div`
   justify-content: center;
   background-color: ${vars.colour.yellowLight};
-  height: 450px;
   margin-bottom: 3rem;
-  padding: 2rem;
-  color: ${vars.colour.blueText};
+  padding: 1.5rem;
+  color: #3477db;
   font-weight: 600;
+
+  h3 {
+    font-size: 2em;
+    line-height: 4rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 5rem;
+  }
 `;
 
 const PaymentContactRow = styled(Flex)`
@@ -146,7 +154,8 @@ const LandingPageContainer = () => {
         </InfoFormContainer>
       </RowOne>
       <HowItWorks>
-        <span id="howWorks">How it works card here</span>
+        <span id="howWorks" />
+        <HowWorks />
       </HowItWorks>
       <PaymentContactRow>
         <PaymentSection>
@@ -164,6 +173,27 @@ const LandingPageContainer = () => {
             >
               Email: support@packageparrot.com
             </StyledLink>
+            <div style={{ marginTop: "17px", fontSize: "0.4em" }}>
+              Site Icon made by{" "}
+              <StyledLink
+                href="https://www.freepik.com/?__hstc=57440181.28b69581c746592fae34cb2eb01c94d7.1557704855840.1557704855840.1557704855840.1&__hssc=57440181.2.1557704855841&__hsfp=1290042825"
+                title="Freepik"
+              >
+                Freepik
+              </StyledLink>{" "}
+              from{" "}
+              <StyledLink href="https://www.flaticon.com/" title="Flaticon">
+                www.flaticon.com
+              </StyledLink>{" "}
+              is licensed by{" "}
+              <StyledLink
+                href="http://creativecommons.org/licenses/by/3.0/"
+                title="Creative Commons BY 3.0"
+                target="_blank"
+              >
+                CC 3.0 BY
+              </StyledLink>
+            </div>
           </Box>
         </ContactSection>
       </PaymentContactRow>

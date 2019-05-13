@@ -6,7 +6,7 @@ import axios from "axios";
 
 const LabelBoxPair = styled(Flex)`
   flex-direction: column;
-  width: 25%;
+  width: 35%;
   margin-right: 6px;
 `;
 
@@ -31,7 +31,7 @@ const StyledInput = styled(Input)`
 `;
 
 const StyledStripeCheckout = styled(StripeCheckout)`
-  width: 100%;
+  width: 25%;
   background: ${vars.colour.blueMain} !important;
   box-shadow: none !important;
   transition: all 300ms linear;

@@ -46,7 +46,7 @@ const InfoForm = () => {
   const [address, setAddress] = useState("");
   return (
     <Card>
-      <Header>Your order info below</Header>
+      <Header>Request form</Header>
       <LabelBoxPair>
         <StyledLabel>Link to item</StyledLabel>
         <StyledInput
