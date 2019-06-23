@@ -27,27 +27,28 @@ const ButtonRow = styled(Flex)`
 const RowOne = styled(Flex)`
   justify-content: space-between;
   margin-bottom: 1.5rem;
-
-  @media (max-width: 750px) {
-    display: block;
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
+  max-width: 100%;
 `;
 
 const ImageWrapper = styled(Flex)`
-  width: 50%;
+  min-width: 50%;
+  min-height: 400px;
   justify-content: center;
   background-image: url(${splashImage});
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right;
+  background-position: center;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 `;
 
 const InfoFormContainer = styled(Flex)`
   width: 50%;
   justify-content: center;
   padding: 1rem 1rem;
-  @media (max-width: 650px) {
+  @media (max-width: 750px) {
     width: 100%;
   }
 `;
@@ -57,7 +58,7 @@ const HowItWorks = styled.div`
   background-color: ${vars.colour.yellowLight};
   margin-bottom: 1rem;
   padding: 1.5rem;
-  color: #3477db;
+  color: ${vars.colour.blueDarker};
   font-weight: 600;
 
   h3 {
@@ -178,27 +179,6 @@ const LandingPageContainer = () => {
             >
               Email: support@packageparrot.com
             </StyledLink>
-            {/* <div style={{ marginTop: "17px", fontSize: "0.4em" }}>
-              Site Icon made by{" "}
-              <StyledLink
-                href="https://www.freepik.com/?__hstc=57440181.28b69581c746592fae34cb2eb01c94d7.1557704855840.1557704855840.1557704855840.1&__hssc=57440181.2.1557704855841&__hsfp=1290042825"
-                title="Freepik"
-              >
-                Freepik
-              </StyledLink>{" "}
-              from{" "}
-              <StyledLink href="https://www.flaticon.com/" title="Flaticon">
-                www.flaticon.com
-              </StyledLink>{" "}
-              is licensed by{" "}
-              <StyledLink
-                href="http://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-              >
-                CC 3.0 BY
-              </StyledLink>
-            </div> */}
           </Box>
         </ContactSection>
       </PaymentContactRow>
