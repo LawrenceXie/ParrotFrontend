@@ -63,7 +63,7 @@ const Box = styled.div`
 const PaymentForm = () => {
   const [email, setEmail] = useState("");
   const [price, setPrice] = useState("");
-  const publishableKey = "pk_test_LE1dkV4q4zzaKcE2rWKXVr06";
+  const publishableKey = "pk_live_pP6IJs02gRwnFvwPdQblnTav00RHplJv4H";
 
   const onToken = token => {
     const body = {
