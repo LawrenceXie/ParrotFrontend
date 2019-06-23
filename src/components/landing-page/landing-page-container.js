@@ -15,6 +15,9 @@ const TopNav = styled(Flex)`
   justify-content: space-between;
   margin-bottom: 1.5rem;
   padding: 1rem 2rem;
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 const ButtonRow = styled(Flex)`
@@ -24,19 +27,20 @@ const ButtonRow = styled(Flex)`
 const RowOne = styled(Flex)`
   justify-content: space-between;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 750px) {
+    display: block;
+    flex-direction: column;
+  }
 `;
 
 const ImageWrapper = styled(Flex)`
-  min-width: 50%;
+  width: 50%;
   justify-content: center;
   background-image: url(${splashImage});
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-
-  @media (max-width: 650px) {
-    display: none;
-  }
 `;
 
 const InfoFormContainer = styled(Flex)`
@@ -51,7 +55,7 @@ const InfoFormContainer = styled(Flex)`
 const HowItWorks = styled.div`
   justify-content: center;
   background-color: ${vars.colour.yellowLight};
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding: 1.5rem;
   color: #3477db;
   font-weight: 600;
@@ -77,7 +81,7 @@ const PaymentContactRow = styled(Flex)`
 
 const PaymentSection = styled(Flex)`
   background-color: ${vars.colour.blueDarker};
-  width: 48%;
+  width: 49%;
   border-radius: 4px;
   padding: 2rem;
   color: ${vars.colour.white};
@@ -90,7 +94,7 @@ const PaymentSection = styled(Flex)`
 
 const ContactSection = styled(Flex)`
   background-color: ${vars.colour.blueDarker};
-  width: 48%;
+  width: 49%;
   border-radius: 4px;
   padding: 2rem;
   color: ${vars.colour.white};
@@ -112,6 +116,7 @@ const StyledLink = styled.a`
   &:hover {
     color: ${vars.colour.darkGrey};
   }
+  font-size: 1.2rem;
 `;
 
 const StyledHeader = styled.h1`
@@ -173,7 +178,7 @@ const LandingPageContainer = () => {
             >
               Email: support@packageparrot.com
             </StyledLink>
-            <div style={{ marginTop: "17px", fontSize: "0.4em" }}>
+            {/* <div style={{ marginTop: "17px", fontSize: "0.4em" }}>
               Site Icon made by{" "}
               <StyledLink
                 href="https://www.freepik.com/?__hstc=57440181.28b69581c746592fae34cb2eb01c94d7.1557704855840.1557704855840.1557704855840.1&__hssc=57440181.2.1557704855841&__hsfp=1290042825"
@@ -193,7 +198,7 @@ const LandingPageContainer = () => {
               >
                 CC 3.0 BY
               </StyledLink>
-            </div>
+            </div> */}
           </Box>
         </ContactSection>
       </PaymentContactRow>

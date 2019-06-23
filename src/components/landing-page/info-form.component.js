@@ -60,7 +60,11 @@ const InfoForm = () => {
       </LabelBoxPair>
       <LabelBoxPair>
         <StyledLabel>Email</StyledLabel>
-        <StyledInput value={email} onChange={e => setEmail(e.target.value)} />
+        <StyledInput
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          type="email"
+        />
       </LabelBoxPair>
       <LabelBoxPair>
         <StyledLabel>Delivery Address</StyledLabel>
