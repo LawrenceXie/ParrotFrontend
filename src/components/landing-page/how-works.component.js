@@ -200,11 +200,11 @@ const HowWorks = () => {
                 </TableRow>
                 <TableRow>
                   <TableCell>Fits in a backpack</TableCell>
-                  <TableCell>$18</TableCell>
+                  <TableCell>$13</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Fits in a suitcase</TableCell>
-                  <TableCell>$24</TableCell>
+                  <TableCell>$19</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Larger</TableCell>
